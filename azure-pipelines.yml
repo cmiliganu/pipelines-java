@@ -10,6 +10,11 @@ pool: 'LocalDevTestPool'
 #  vmImage: 'ubuntu-latest'
 
 steps:
+- script: |
+    echo "Testing Maven"
+    mvn --version
+  displayName: 'Tests on Maven'
+  
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
